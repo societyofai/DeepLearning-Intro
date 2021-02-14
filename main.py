@@ -10,6 +10,7 @@ def index():
 def user_details():
     return render_template('index.html')
 
+
 @app.route("/details", methods=['GET', 'POST'])
 def details():
     if request.method == 'POST': ## post method
@@ -18,9 +19,9 @@ def details():
         data = {
             'username': username
         }
-        return render_template('details.html', data = data)
+        return render_template('list_output.html', data = data)
     else: ## get method
-        return render_template('details.html')
+        return render_template('list_output.html')
 
 if __name__ == "__main__":
     app.run()

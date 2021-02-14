@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>List of Student</title>
+</head>
+<body>
+    <p>Inside details page</p>
+    {% if data %}
+        {% for i in data%}
+            <ul>
+            <li> Username is : {{ i["username"] }} Class is {{i["class"]}}</li>
+            </ul> 
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
