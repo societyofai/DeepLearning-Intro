@@ -13,8 +13,10 @@
 
     <p>Hello User welcome to flask. Enter your details</p>
 
-    <form method="post" action="{{ url_for('details') }}">
+    <form method="post" action= "{{ url_for('detail_of_user') }}" >
         Enter your name:<input type="text" name="username">
+        Enter your Class:<input type="text" name="class_user">
+        <button type="submit"  >SuBmIt NoW</button>
     </form>
 
 </body>

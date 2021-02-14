@@ -7,11 +7,9 @@
 <body>
     <p>Inside details page</p>
     {% if data %}
-        {% for i in data%}
-            <ul>
-            <li> Username is : {{ i["username"] }} Class is {{i["class"]}}</li>
-            </ul> 
-        {% endfor %}
+        <ul>
+            <li> Username is : {{ data["username"] }} Class is {{ data["class"] }}</li>
+        </ul> 
     {% endif %}
 </body>
 </html>
