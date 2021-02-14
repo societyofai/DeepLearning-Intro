@@ -25,6 +25,19 @@ def details():
     else: ## get method
         return render_template('details.html')
 
+@app.route("/new_details", methods=['GET','POST'])
+def new_details():
+    if request.methods == 'POST':
+        new_data = request.form
+        username = new_data['username']
+        classname = new_data['classname']
+        new_data = {
+            'username': username,
+            'classname': classname
+        }
+        return render_template('new_details.html' , new_data = new_data)
+    else:
+        return render_template('new_details.html' , new_data = new_data)
 if __name__ == "__main__":
     app.run()
 
