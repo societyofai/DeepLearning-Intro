@@ -15,9 +15,6 @@ def details():
     if request.method == 'POST': ## post method
         data = request.form
         username = data['username']
-        # print("username given to the user was", username)
-        # return "POST method was called"
-        # return "username given to the user was {}".format(username)
         data = {
             'username': username
         }
